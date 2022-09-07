@@ -6,7 +6,6 @@ import { StateType } from '../App';
 
 export const LottieComponent: React.FC<{ setState: (state: StateType) => void }> = ({ setState }) =>
 {
-	const timeout = React.useRef<ReturnType<typeof setTimeout>>()
 	const [show, setShow] = React.useState(true)
 	const transitions = useTransition(show, {
 		from: { opacity: 0 },
@@ -25,7 +24,7 @@ export const LottieComponent: React.FC<{ setState: (state: StateType) => void }>
 		{
 			setState('resolve')
 		}, 2500)
-	}, [])
+	}, [setState])
 
 	return transitions(
 		(styles, item) =>

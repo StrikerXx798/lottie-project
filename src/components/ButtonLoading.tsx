@@ -18,7 +18,7 @@ export const ButtonLoading: React.FC<{ setState: (state: StateType) => void }> =
 	{
 		setShow(false)
 		setTimeout(() => setState('pending'), 1000)
-	}, [])
+	}, [setState])
 
 	return transitions(
 		(styles, item) =>

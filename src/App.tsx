@@ -24,7 +24,7 @@ export const App: React.FC = () =>
         default:
           return <ButtonLoading setState={setState} />
       }
-    }, [state])
+    }, [])
 
 
   return (
